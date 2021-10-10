@@ -5,22 +5,23 @@ import { useState } from 'react';
 const API_KEY = process.env.REACT_APP_ROVER_API_KEY
 
 function App() {
-  const [rovers, setRovers] = useState({
+  const [state, setState] = useState({
     rover: "opportunity",
     sol: 0,
     camera: ""
   });
+  const [rovers, setRovers] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
 
-  const API = `https://api.nasa.gov/mars-photos/api/v1/rovers/${rovers.rover}/photos?sol=${rovers.sol}&camera=${rovers.camera}&api_key=${API_KEY}`
+  const API = `https://api.nasa.gov/mars-photos/api/v1/rovers/${state.rover}/photos?sol=${state.sol}&camera=${state.camera}&api_key=${API_KEY}`
 
   const handleChange = (event) => {
     event.preventDefault()
 
     const value = event.target.value
 
-    setRovers({
-      ...rovers,
+    setState({
+      ...state,
       [event.target.name]: event.target.type === 'number' ? parseInt(value) : value
     })
   }
@@ -33,7 +34,10 @@ function App() {
       .then(data => {
         setRovers(data.photos)
         setIsLoaded(true)
-      })
+      },
+        error => {
+          setIsLoaded(true)
+        })
   }
 
 
@@ -41,7 +45,9 @@ function App() {
   return (
     <div>
       <SearchForm onChange={handleChange} onSubmit={handleSubmit} />
-      {isLoaded && <Rovers rovers={rovers} />}
+      <div>
+        {isLoaded && <Rovers rovers={rovers} />}
+      </div>
     </div>
   );
 }
