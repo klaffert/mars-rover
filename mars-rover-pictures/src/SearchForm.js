@@ -1,7 +1,9 @@
+import "./SearchForm.css";
+
 function SearchForm({ onChange, onSubmit }) {
     return (
-        <div>
-            <form onSubmit={onSubmit}>
+        <div className="search-container">
+            <form onSubmit={onSubmit} className="search-bar">
                 <label>
                     Rover Name:
                 </label>
@@ -15,7 +17,6 @@ function SearchForm({ onChange, onSubmit }) {
                 </label>
                 <input
                     type="text"
-                    // value={query.date}
                     onChange={onChange}
                     name='sol'
                 />

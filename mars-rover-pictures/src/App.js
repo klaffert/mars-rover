@@ -1,6 +1,10 @@
-import SearchForm from './SearchForm';
-import Rovers from './Rovers';
-import { useState } from 'react';
+import Header from "./Header";
+import SearchForm from "./SearchForm";
+import Rovers from "./Rovers";
+
+import "./App.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { useState } from "react";
 
 const API_KEY = process.env.REACT_APP_ROVER_API_KEY
 
@@ -44,6 +48,7 @@ function App() {
 
   return (
     <div>
+      <Header />
       <SearchForm onChange={handleChange} onSubmit={handleSubmit} />
       <div>
         {isLoaded && <Rovers rovers={rovers} />}
@@ -54,3 +59,7 @@ function App() {
 
 
 export default App;
+
+// TO DO
+// If return empty array, return message 
+// add page params in query
