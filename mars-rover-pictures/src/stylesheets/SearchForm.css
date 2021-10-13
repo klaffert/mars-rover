@@ -1,0 +1,49 @@
+.search-form-container{
+    background-color: #1D1C20;
+    color: #FFF;
+    padding: 54px;
+}
+
+
+.form-select {
+    background-color: #2F2E31 !important;
+    color: #FFF !important;
+    border-color: #4E4D50 !important;
+    appearance: none;
+    background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ccc9d3' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e") no-repeat right !important;
+    background-size: 16px 12px !important;
+    background-position: right .75rem center !important;    
+
+}
+
+.form-control {
+    background-color: #1D1C20 !important;
+    color: #FFF !important; 
+    border-color: #4E4D50 !important;
+}
+
+.btn {
+    background-color: #0C98B6 !important;
+    border-color: #0C98B6 !important;
+    padding: 10px 40px !important;
+}
+
+.form-label {
+    font-size: 15px;
+    color: #A0A0A1;
+    margin-bottom: 2px !important;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #FFF !important;
+    background-color: #1D1C20 !important;
+    opacity: 60% !important;
+  }
+
+  .camera {
+      padding-bottom: 40px;
+  }
+
+  .hero-text {
+      padding-bottom: 30px;
+  }

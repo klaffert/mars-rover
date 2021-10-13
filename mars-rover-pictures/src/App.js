@@ -1,10 +1,12 @@
-import Header from "./Header";
-import SearchForm from "./SearchForm";
-import Rovers from "./Rovers";
+import Header from "./components/Header";
+import SearchForm from "./components/SearchForm";
+import Rovers from "./components/Rovers";
 
 import "./App.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from "react";
+
+import { Container, Row, Col } from "react-bootstrap";
+
 
 const API_KEY = process.env.REACT_APP_ROVER_API_KEY
 
@@ -39,20 +41,24 @@ function App() {
         setRovers(data.photos)
         setIsLoaded(true)
       },
-        error => {
+        (error) => {
           setIsLoaded(true)
         })
   }
 
-
-
   return (
     <div>
       <Header />
-      <SearchForm onChange={handleChange} onSubmit={handleSubmit} />
-      <div>
-        {isLoaded && <Rovers rovers={rovers} />}
-      </div>
+      <Container >
+        <Row>
+          <Col lg={5}>
+            <SearchForm onChange={handleChange} onSubmit={handleSubmit} />
+          </Col>
+          <Col lg={7}>
+            {isLoaded && <Rovers rovers={rovers} />}
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 }
@@ -62,4 +68,4 @@ export default App;
 
 // TO DO
 // If return empty array, return message 
-// add page params in query
+// maybe uninstall SASS

@@ -1,7 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
 
 html, body {
-  font-family: 'Roboto', sans-serif;
-  text-align: center;
+background-color: #26242C !important;
+color: #FFF !important;
+/* margin: 0px !important; */
 }
+
+body {
+  font-family: 'Roboto', sans-serif !important;
+}
+
+
 

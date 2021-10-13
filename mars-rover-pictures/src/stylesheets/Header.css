@@ -1,0 +1,17 @@
+.logo-text {
+    color: #FFF;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.logo-text p {
+    margin: 0px;
+}
+
+.title-head {
+    padding-top: 20px;
+}
+
+.navbar {
+    padding: 24px 0px !important;
+}
