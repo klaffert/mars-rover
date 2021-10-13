@@ -5,6 +5,11 @@ h3 {
     padding: 0px;
 }
 
+p {
+    margin: 0px;
+    padding: 0px;
+}
+
 .carousel-caption {
     top: 1.25rem !important;
     text-align: left !important;
@@ -12,16 +17,12 @@ h3 {
     right: 54px !important;
 }
 
-p {
-    margin: 0px;
-    padding: 0px;
-}
 .caption-title {
     display: inline-block;
 }
 
 .caption-sol {
-    display: inline-block;
+    display: block;
     float: right;
     text-align: right;
 }
@@ -29,13 +30,4 @@ p {
 .sol-date {
     font-weight: 700;
     margin-bottom: -4px;
-}
-
-.carousel-item {
-    background: rgb(0,0,0) !important;
-    background: linear-gradient(180deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 60%) !important;
-}
-
-img { 
-z-index: -1 !important;
 }

@@ -1,73 +1,71 @@
-# Getting Started with Create React App
+# Project Title
+
+Mars Rover Capture Library
+
+## Description
+
+The Mars Rover Capture Library uses the NASA Mars API to fetch data and based on user's input, displays the photos taken from that Rover, specific date and camera.
+
+I spent about 1.5 hours building out the functionality within the form and then spent another 1.5 hours building out the styling in React-Bootstrap. 
+
+## Getting Started
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Here are steps to take to run this app:
 
-In the project directory, you can run:
+1. Run npm install npm@latest -g
+2. Clone the repo git clone git@github.com:klaffert/mars-rover.git
+3. Run npm install to install NPM packages
+4. Run npm start
+    * This will start the local development server and show you the app in your browser
 
-### `npm start`
+### Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* React
+* React-Bootstrap
+* React Hooks
+* NASA API
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Issues Faced
 
-### `npm test`
+#### API Security Key
+While the NASA API key has a demo key available, I wanted to create my own so I had more freedom in the number of calls I could make to the API. For example, with the DEMO API key, you can make 30 requests per hour vs. 1000 requests per hour with personal API key. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Hardcoded API keys are a big no-no because they expose the API key to the public. This allows malicious users to use your API key, if desired. 
 
-### `npm run build`
+I resolved this by placing my API key in a variable in an .env file and that placing that file in .gitignore and then called that variable as needed (as shown in App.js). When I pushed my code to GitHub, this .env file was ignored and not shown in my git repository. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Customizing Photo Carousel
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+React Bootstrap components come with built-in styling, which means that any component customization needs to override the default styling. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+By default, the carousel caption is centered in the bottom center of the image. To override this and show the caption at the top and on the sides, I needed to read the documentation on how to do this. What I ended up doing was create a custom class for the elements I wanted to customize and handling them in CSS. 
 
-### `npm run eject`
+#### Handling multiple form inputs
+The form has multiple inputs, which mean there multiple states to keep track of. I needed to ensure the state of the app updated with each user input as well as the API URL so when the user clicked 'Search', the data returned matched their input. 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+To resolve this, I bought out functionality that handled the user's input individually and assigned the value to the state with each change of input. When the user clicked sumibt, it would only search the API for the inputs that were last selected. 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Potential Improvements
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### Improved error handling
+If I had more time, I would have liked to implement better error handling to include handling bad API calls, handling different data types within the "Sol" input and handling the case of when no data is available for the selected input. 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Currently, there is no logic set up for error handling unsuccessful API calls. When a user inputs a selection that has no data, a blank carousel is shown. I would like to use conditional rendering that would show some sort of message or alert to the user that would tell them there are no photos available for that selection and to retry a different input. 
+#### Extend filtering logic
+There are multiple data points to filter on and if I had more time, I would have liked to build out additional filters, such as Earth Date. 
 
-## Learn More
+#### UI changes to show which cameras are available for specified rover
+Currently, you are able to select every camera for every rover, regardless of whether that camera is available on that specific rover. How I would improve this would be to mute or dull the cameras that are not available for the selected rover. I would go about doing this by creating a function that searchs the rover object for that specific camera and if it is not available, then mute the camera selection.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Reasoning behind decisions
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### React Hooks
+My goal for this project was to only use functional components and use React Hooks. React Hooks are a relatively newer feature of React that allows the developer to 'hook' into the state of the app from within functional components rather than build the state out in the constructor of a class component. This makes for less code and easier readability. 
 
-### Code Splitting
+#### React-Bootstrap
+I've worked with Material-UI before and wanted to try React-Bootstrap for my UI library. I liked React Bootstrap's reusability and ease of customization (after some research). Also, React Bootstrap offers total responsiveness, meaning I didn't need to worry about media queries. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-
-MATERIAL UI
+#### Carousel
+The carousel was build out using React-Bootstrap. I decided to use a carousel because I thought it made for a cleaner UI and was an interesting way to display the images rather than out in cards. 

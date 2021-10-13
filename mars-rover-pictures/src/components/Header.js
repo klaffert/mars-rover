@@ -14,7 +14,9 @@ function Header() {
                         className="d-inline-block align-top"
                     />
                     <div className="d-inline-block align-left logo-text">
-                        <p className="title-head">Mars Rover</p>
+                        <p className="title-head">
+                            Mars Rover
+                        </p>
                         <p>Capture Library</p>
                     </div>
                 </Navbar.Brand>

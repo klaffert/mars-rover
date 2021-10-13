@@ -7,7 +7,6 @@ import { useState } from "react";
 
 import { Container, Row, Col } from "react-bootstrap";
 
-
 const API_KEY = process.env.REACT_APP_ROVER_API_KEY
 
 function App() {
@@ -52,10 +51,14 @@ function App() {
       <Container >
         <Row>
           <Col lg={5}>
-            <SearchForm onChange={handleChange} onSubmit={handleSubmit} />
+            <SearchForm
+              onChange={handleChange}
+              onSubmit={handleSubmit}
+            />
           </Col>
           <Col lg={7}>
-            {isLoaded && <Rovers rovers={rovers} />}
+            {isLoaded &&
+              <Rovers rovers={rovers} />}
           </Col>
         </Row>
       </Container>
@@ -65,7 +68,3 @@ function App() {
 
 
 export default App;
-
-// TO DO
-// If return empty array, return message 
-// maybe uninstall SASS
