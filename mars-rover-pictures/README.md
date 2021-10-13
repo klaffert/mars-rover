@@ -6,7 +6,7 @@ Mars Rover Capture Library
 
 The Mars Rover Capture Library uses the NASA Mars API to fetch data and based on user's input, displays the photos taken from that Rover, specific date and camera.
 
-I spent about 1.5 hours building out the functionality within the form and then spent another 1.5 hours building out the styling in React-Bootstrap. 
+I spent about 1.5 hours building out the functionality within the form and then spent another 2 hours building out the styling in React-Bootstrap. I really enjoy styling and was having fun with React Bootstrap. 
 
 ## Getting Started
 

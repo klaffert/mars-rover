@@ -18,7 +18,7 @@ function App() {
   const [rovers, setRovers] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
 
-  const API = `https://api.nasa.gov/mars-photos/api/v1/rovers/${state.rover}/photos?sol=${state.sol}&camera=${state.camera}&api_key=${API_KEY}`
+  const API = `https://api.nasa.gov/mars-photos/api/v1/rovers/${state.rover}/photos?sol=${state.sol}&camera=${state.camera}&api_key=DEMO_KEY`
 
   const handleChange = (event) => {
     event.preventDefault()
