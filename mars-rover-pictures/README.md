@@ -19,7 +19,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 3. Run npm start
     * This will start the local development server and show you the app in your browser
 
-** I created a personal API key for my own purposes. However, for the sake of ease of testing, I've added the DEMO_KEY into the API URL, so users can try out the app **
+I created a personal API key for my own purposes. However, for the sake of ease of testing, I've added the DEMO_KEY into the API URL, so users can try out the app
 
 ### Technologies Used
 
