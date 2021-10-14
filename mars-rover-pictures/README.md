@@ -14,11 +14,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Here are steps to take to run this app:
 
-1. Run npm install npm@latest -g
-2. Clone the repo git clone git@github.com:klaffert/mars-rover.git
-3. Run npm install to install NPM packages
-4. Run npm start
+1. Clone the repo git clone git@github.com:klaffert/mars-rover.git
+2. Run npm install to install NPM packages
+3. Run npm start
     * This will start the local development server and show you the app in your browser
+
+** I created a personal API key for my own purposes. However, for the sake of ease of testing, I've added the DEMO_KEY into the API URL, so users can try out the app **
 
 ### Technologies Used
 
