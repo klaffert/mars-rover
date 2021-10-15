@@ -1,8 +1,8 @@
-![image](https://user-images.githubusercontent.com/49892991/137564205-88d28545-d202-44e4-ad49-edcab63ac6eb.png)
-
 # Project Title
 
 Mars Rover Capture Library
+
+![image](https://user-images.githubusercontent.com/49892991/137564205-88d28545-d202-44e4-ad49-edcab63ac6eb.png)
 
 ## Description
 
